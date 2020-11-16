@@ -1,3 +1,7 @@
+"""
+Launch the game
+"""
+
 import pygame
 from math import floor
 from board import Board
@@ -13,6 +17,9 @@ h = int(400 / 3)
 game_over = False
 turn = 0
 
+"""
+Determine if user click on good position to put token
+"""
 def is_valid(row,col):
     return row > -1 and row < 3 and col > - 1 and col < 3
 

@@ -1,3 +1,7 @@
+"""
+Represent the tictactoe board
+"""
+
 import pygame
 
 BLACK = (0,0,0)
@@ -8,13 +12,26 @@ w = 400 // 3
 h = 400 // 3
 
 class Board:
+
+    """
+    Init the board game
+    """
     def __init__(self):
         self.board = [['','',''],['','',''],['','','']]
 
+    """
+    Determine if there is a token at position
+    -   row position of row 
+    -   col position of col
+    """
     def is_empty_slot(self, row, col):
         if self.board[row][col] == '':
             return True
 
+    """
+    Determine if last move is a winning move
+    -   piece last piece placed on board
+    """
     def is_winning_move(self,piece):
         # horizontal 
         for i in range(ROW):
@@ -33,6 +50,10 @@ class Board:
         if self.board[0][0] == piece and self.board[1][1] == piece and self.board[2][2] == piece:
             return True
 
+    """
+    Draw tictactoe board 
+    - surface screen to display 
+    """
     def draw_board(self, surface):
         pygame.draw.line(surface,BLACK,[0,w],[400,w],5)
         pygame.draw.line(surface,BLACK,[0,w*2],[400,w*2],5)

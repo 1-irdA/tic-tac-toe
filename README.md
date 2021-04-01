@@ -2,4 +2,4 @@
 Python TicTacToe with Pygame
 
 ## Demo
-![Alt text](demo.PNG?raw=true "Title")
+![Alt text](assets/demo.PNG?raw=true "Title")
